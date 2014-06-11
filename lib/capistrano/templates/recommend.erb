@@ -1,0 +1,74 @@
+upstream unicorn_bday_june {
+	server unix:/tmp/unicorn.bday_june.sock fail_timeout=0;
+}
+			
+# birthday.su-m37.co.kr
+server{
+	listen 443;
+	server_name birthday.su-m37.co.kr;
+	ssl_certificate /etc/ssl/certs/birthday.su-m37.co.kr.chained.crt;
+	ssl_certificate_key /etc/ssl/private/birthday.su-m37.co.kr.nopass.key;
+	ssl_session_timeout 5m;
+	ssl_protocols SSLv2 SSLv3 TLSv1;
+	ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+	ssl_prefer_server_ciphers on;
+	try_files $uri/index.html $uri @unicorn_bday_june;
+	location @unicorn_bday_june {
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto https;
+		proxy_set_header Host $http_host;
+		proxy_redirect off;
+		proxy_pass http://unicorn_bday_june;
+	}
+	root /home/onesup/www/bday_june/current/public;
+	location ~ ^/assets/ {
+		gzip_static on;
+		expires max;
+		add_header Cache-Control public;
+	}
+	error_log	/var/log/nginx/error.bday_june.log;
+	access_log	/var/log/nginx/access.bday_june.log;
+	client_max_body_size 100M;
+	charset		utf-8;
+}
+
+# birthday.su-m37.com
+server{
+	listen 443;
+	server_name birthday.su-m37.com;
+	ssl_certificate /etc/ssl/certs/birthday.su-m37.com.chained.crt;
+	ssl_certificate_key /etc/ssl/private/birthday.su-m37.com.nopass.key;
+	ssl_session_timeout 5m;
+	ssl_protocols SSLv2 SSLv3 TLSv1;
+	ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+	ssl_prefer_server_ciphers on;
+	try_files $uri/index.html $uri @unicorn_bday_june;
+	location @unicorn_bday_june {
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto https;
+		proxy_set_header Host $http_host;
+		proxy_redirect off;
+		proxy_pass http://unicorn_bday_june;
+	}
+	root /home/onesup/www/bday_june/current/public;
+	location ~ ^/assets/ {
+		gzip_static on;
+		expires max;
+		add_header Cache-Control public;
+	}
+	error_log	/var/log/nginx/error.bday_june.log;
+	access_log	/var/log/nginx/access.bday_june.log;
+	client_max_body_size 100M;
+	charset		utf-8;  
+}
+
+server{
+    listen 80;
+    server_name birthday.su-m37.co.kr;
+    rewrite ^/(.*) https://$server_name/$1 permanent;
+}
+server{
+    listen 80;
+    server_name birthday.su-m37.com;
+    rewrite ^/(.*) https://$server_name/$1 permanent;
+}

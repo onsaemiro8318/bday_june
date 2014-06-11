@@ -8,8 +8,6 @@ set :scm_user, "onesup"
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/home/onesup/www/bday_june"
-set :user, "onesup"
 
 # Default value for :scm is :git
 # set :scm, :git
