@@ -124,6 +124,7 @@ $(document).ready(function(){
 	      closeClass: 'b-close',
 	    });
 		}
+    blog_share();
     ga('send', 'event', 'button', 'click', 'pc 블로그로 공유하기 버튼');
   });	
 	
@@ -162,7 +163,7 @@ $(document).ready(function(){
 	        },
 	        success: function (data) {
 	        }
-	        });
+	      });
 	      share();
 			}
     });
@@ -210,6 +211,7 @@ function blog_share()
       'viral_action[device]': "pc"
     },
     success: function (data) {
+      
     }
     });
 }

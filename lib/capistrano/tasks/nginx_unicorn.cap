@@ -16,7 +16,7 @@ namespace :load do
     set :unicorn_log, -> { "#{shared_path}/log/unicorn.log" }
     set :unicorn_error_log, -> { "#{shared_path}/log/unicorn.err.log" }
     set :unicorn_user, -> { fetch(:user) }
-    set :unicorn_workers, 5
+    set :unicorn_workers, 2
     set :unicorn_rack_env, -> { fetch(:rails_env) }
   end
 end
@@ -25,18 +25,18 @@ namespace :nginx do
   desc "Setup nginx configuration for this application"
   task :setup do
     on roles :web do |host|
-      template "nginx_conf.erb", "/tmp/nginx.conf"
+      # template "nginx_conf.erb", "/tmp/nginx.conf"
       # execute :sudo, :cp, "/tmp/nginx.conf /etc/nginx/nginx.conf"
-      execute :rm, "/tmp/nginx.conf"
+      # execute :rm, "/tmp/nginx.conf"
       # execute :touch, "/tmp/null.site"
-      capture(:ls, "/etc/nginx/sites-enabled/").lines.to_a.each do |s|
+      # capture(:ls, "/etc/nginx/sites-enabled/").lines.to_a.each do |s|
         # execute :sudo, :cp, "/tmp/null.site /etc/nginx/sites-enabled/#{s.strip}"
-      end
+      # end
       
-      template "nginx_site.erb", "/tmp/nginx.#{fetch(:application)}"
-      execute :sudo, :cp, "/tmp/nginx.#{fetch(:application)} /etc/nginx/sites-available/#{fetch(:application)}"
-      execute :rm, "/tmp/nginx.#{fetch(:application)}"
-      execute :sudo, :ln, "-fs", "/etc/nginx/sites-available/#{fetch(:application)} /etc/nginx/sites-enabled/#{fetch(:application)}"
+      # template "nginx_site.erb", "/tmp/nginx.#{fetch(:application)}"
+      # execute :sudo, :cp, "/tmp/nginx.#{fetch(:application)} /etc/nginx/sites-available/#{fetch(:application)}"
+      # execute :rm, "/tmp/nginx.#{fetch(:application)}"
+      # execute :sudo, :ln, "-fs", "/etc/nginx/sites-available/#{fetch(:application)} /etc/nginx/sites-enabled/#{fetch(:application)}"
       
       # if fetch(:nginx_use_ssl)
       #   if fetch(:nginx_upload_local_certificate)
