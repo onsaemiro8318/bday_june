@@ -11,4 +11,12 @@ class Admin::UsersController < ApplicationController
     @coupon_used_counts = User.coupon_used_counts
   end
   
+  def logs
+    id = params[:id]
+    id = 1 if id.nil?
+    @user_stats = User.paginate_by_week(id)
+    @user_stats_sum = User.paginate_by_week_sum(id)
+    @user_first_day = User.first_day()
+  end
+  
 end
