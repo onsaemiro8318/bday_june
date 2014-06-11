@@ -12,7 +12,6 @@ $(document).ready(function(){
 
 	clip.on("load", function (clip) {
 		clip.on( "complete", function(clip, args) {
-			blog_share();
 			ga('send', 'event', 'button', 'click', '클립보드로 복사하는 버튼');
 			alert("ctrl+c 되었습니다.\nctrl+v 만 해주시면 되어요^^");
 		});
