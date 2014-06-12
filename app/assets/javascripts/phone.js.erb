@@ -81,7 +81,7 @@ $(document).ready(function(){
 	
   $("#kakaostory_share_link").click(function(e){
     e.preventDefault();
-		if(event_open == "running"){
+		if(event_open() == "running"){
 	    kakao.link("story").send({
 	      post : "여름에 꼭 한번 써보고\n싶었던 숨37 젤 크림!\n피부생일 선물로 준다고!?\nhttp://bit.ly/su-m37-ks",
 	      appid : "skin_birthday",
