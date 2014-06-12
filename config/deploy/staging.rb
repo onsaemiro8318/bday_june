@@ -1,4 +1,4 @@
-server 'm4.mnv.kr', user: 'onesup', roles: %w{web app db}# , my_property: :my_value
+server 'm6.mnv.kr', user: 'onesup', roles: %w{web app db}# , my_property: :my_value
 set :rails_env, :staging
 set :application, 'bday_june_staging'
 set :user, "deployer"
