@@ -8,7 +8,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'unicorn'
 gem 'net-ssh', '2.8.0'
-# gem 'turbolinks'
 gem "therubyracer", "~> 0.12.1"
 gem 'execjs'
 gem 'mysql2'
@@ -18,20 +17,16 @@ gem 'devise'
 gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'rest-client'
-gem 'gabba' #serverside google analytics gem
 gem 'json'
 gem 'nokogiri'
 gem 'nori' #xml parser
 gem 'useragent'
-gem 'activerecord-session_store'
 gem 'sucker_punch', '~> 1.0'
 gem 'font-awesome-rails'
 gem 'kaminari'
-
-# gem 'debugger', group: [:development, :test]
-# gem 'dragonfly', "~>1.0.3"
+gem 'writeexcel'
 gem 'koala'
-# gem 'rack-facebook-signed-request', :git => 'git://github.com/cmer/rack-facebook-signed-request.git'
+
 group :development do
   gem 'guard-rails',        group: :development
   gem 'pry',                group: :development
