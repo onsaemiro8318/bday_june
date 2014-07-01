@@ -7,11 +7,12 @@ class Pc::UsersController < ApplicationController
     device = "pc"
     user_agent = UserAgent.parse(request.user_agent)
     device = "mobile" if user_agent.mobile?
-    
     @user = User.new(user_params)
     birthday = "2014-"+params[:user][:birthday_month]+"-"+params[:user][:birthday_day]
     @user.birthday = DateTime.parse(birthday)
     @user.device = device
+    @user.source = session[:source]
+    Rails.logger.info "@@@session@@@"+session[:source].to_s
     respond_to do |format|
       if @user.save
         coupon = Coupon.new

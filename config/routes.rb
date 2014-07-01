@@ -11,6 +11,9 @@ Rails.application.routes.draw do
       collection do
         get 'couponused'
       end
+      member do
+        get 'logs'
+      end
     end
     resources :coupons do
       member do

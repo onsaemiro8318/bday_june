@@ -23,7 +23,7 @@ class Admin::ViralActionsController < ApplicationController
       sum(case when viral_actions.platform = 'blog' then 1 else 0 end) as blog_count, 
     	count(*) as total_count")
         .group("date(convert_tz(viral_actions.created_at,'+00:00','+09:00'))")
-        .order("date(viral_actions.created_at)")
+        .order("date(convert_tz(viral_actions.created_at,'+00:00','+09:00'))")
     @viral_platform_counts_sum = ViralAction.select(
       "sum(case when viral_actions.platform = 'facebook' then 1 else 0 end) as facebook_count, 
       sum(case when viral_actions.platform = 'twitter' then 1 else 0 end) as twitter_count, 

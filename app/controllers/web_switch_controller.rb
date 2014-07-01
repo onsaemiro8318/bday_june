@@ -6,7 +6,6 @@ class WebSwitchController < ApplicationController
       referer = URI(request.referer || '').scheme + "://" + URI(request.referer || '').host 
     end
     session[:referer] = request.referer
-    Rails.logger.info "@@@@@referer: " + referer
     tracking_id = Rails.application.secrets.ga_tracking_id
     url = Rails.application.secrets.url
     user_agent = UserAgent.parse(request.user_agent)
@@ -21,6 +20,7 @@ class WebSwitchController < ApplicationController
       @traffic_log.referer = referer
       @traffic_log.source = source
       @traffic_log.save
+      session[:source] = source
       redirect_to pc_index_path({s: params[:s]})
     end
   end

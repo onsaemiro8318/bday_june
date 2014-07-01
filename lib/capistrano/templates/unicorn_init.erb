@@ -15,7 +15,7 @@ TIMEOUT=${TIMEOUT-60}
 APP_ROOT=<%= current_path %>
 PID=<%= fetch :unicorn_pid %>
 
-CMD="cd <%= current_path %>; /home/deployer/.rbenv/shims/bundle exec unicorn -D -c <%= fetch :unicorn_config %> -E <%= fetch :unicorn_rack_env %>"
+CMD="cd <%= current_path %>; /home/onesup/.rbenv/shims/bundle exec unicorn -D -c <%= fetch :unicorn_config %> -E <%= fetch :unicorn_rack_env %>"
 
 AS_USER=<%= fetch :unicorn_user %>
 set -u

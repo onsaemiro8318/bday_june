@@ -13,7 +13,8 @@ class Mobile::HomeController < ApplicationController
     @traffic_log.device = device
     @traffic_log.referer = referer
     @traffic_log.source = source
-    @traffic_log.save    
+    @traffic_log.save
+    session[:source] = source    
   end
   
   def thank_you

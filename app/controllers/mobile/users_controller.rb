@@ -12,6 +12,9 @@ class Mobile::UsersController < ApplicationController
     birthday = "2014-"+params[:user][:birthday_month]+"-"+params[:user][:birthday_day]
     @user.birthday = DateTime.parse(birthday)
     @user.device = device
+    @user.source = session[:source]
+    Rails.logger.info "@@@session@@@"+session[:source].to_s
+    
     respond_to do |format|
       if @user.save
         c = Coupon.new

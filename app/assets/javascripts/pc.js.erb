@@ -1,9 +1,4 @@
-$(document).ready(function(){
-	
-  // ga(['_trackEvent', 'button', 'click', 'img down 1546']);
-  // loadJsFile('http://i42.icast-ad.com/track?ccd=1242&mcd=01040601&pcd=1546');
-	
-	
+$(document).ready(function(){	
 	var clip = new ZeroClipboard( $(".copy_html"), {
 		moviePath: "<%= asset_path('ZeroClipboard.swf') %>",
 		swfPath: "<%= asset_path('ZeroClipboard.swf') %>",
@@ -17,7 +12,6 @@ $(document).ready(function(){
 
 	clip.on("load", function (clip) {
 		clip.on( "complete", function(clip, args) {
-			blog_share();
 			ga('send', 'event', 'button', 'click', '클립보드로 복사하는 버튼');
 			alert("ctrl+c 되었습니다.\nctrl+v 만 해주시면 되어요^^");
 		});
@@ -41,7 +35,7 @@ $(document).ready(function(){
       });
     }else if(month === '7'){
       $("#select_day option").remove();
-			add_days = range(1, 20);
+			add_days = range(1, 27);
       $.each(add_days, function( index, value ){
         $("#select_day").append($('<option>',{
           value:value,
@@ -52,24 +46,14 @@ $(document).ready(function(){
   });
   $("#gift_button").click(function(e){
     e.preventDefault();
-		// alert("아쉽네요!\n다음엔 조금더 서둘러주세요~");
-		var finish_time = "2014-06-30 23:59:59 +0900";
-		$.ajax({
-			type: 'get',
-			url: '/current_time',
-			success: function (data) {
-				if(Date.parse(finish_time) < Date.parse(data.time)){
-					alert("아쉽네요!\n다음엔 조금더 서둘러주세요~");
-				}else{
-		      $("#popup_info").bPopup({
-		        follow: [false, false], //x, y
-		        position: ['auto', 60], //x, y
-		        closeClass: 'b-close',
-		        modalColor: 'black'
-		      });
-				}
-			}
-		});
+		if(event_open() == "running"){
+	    $("#popup_info").bPopup({
+	      follow: [false, false], //x, y
+	      position: ['auto', 60], //x, y
+	      closeClass: 'b-close',
+	      modalColor: 'black'
+	    });
+		}
     ga('send', 'event', 'button', 'click', '피부 선물 받기');
   });
 
@@ -111,11 +95,9 @@ $(document).ready(function(){
         position: ['auto', 70], //x, y
         onClose: function(){$("#popup_info").bPopup().close();}
       });
-    }
-    else{
+    }else{
       validation(errors);
     }
-    
   });
 
   $("#product_button").click(function(e){
@@ -124,7 +106,6 @@ $(document).ready(function(){
       closeClass: 'b-close',
     });
     ga('send', 'event', 'button', 'click', '제품 자세히 보기');
-
   });
 
   $("#qna_button").click(function(e){
@@ -133,16 +114,27 @@ $(document).ready(function(){
       closeClass: 'b-close',
     });
     ga('send', 'event', 'button', 'click', 'pc qna');
-
   });
 
   $("#blog_share_link").click(function(e){
     e.preventDefault();
-		// alert('아쉽네요!\n 다음엔 조금더 서둘러주세요~');
-    $("#popup_blog").modal({
-      closeClass: 'b-close',
-    });
+		if(event_open() == "running"){
+	    $("#popup_blog").modal({
+	      closeClass: 'b-close',
+	    });
+		}
+    blog_share();
     ga('send', 'event', 'button', 'click', 'pc 블로그로 공유하기 버튼');
+  });	
+	
+  $("#twitter_share_link").click(function(e){
+    e.preventDefault();
+		var text = $(this).attr("data-text");
+		var url = $(this).attr("data-url");
+		if(event_open() == "running"){
+	    twitter_share(text, url);
+		}
+    ga('send', 'event', 'button', 'click', 'twitter 공유하기 버튼');
   });	
 		
   $("#info_phone").mask("999-9999-9999");
@@ -160,27 +152,42 @@ $(document).ready(function(){
     FB.Canvas.setAutoGrow();
     $("#facebook_share_link").click(function(e){
       e.preventDefault();
-			// alert('아쉽네요!\n다음엔 조금더 서둘러주세요~');
-      $.ajax({
-        type: "POST",
-        url: "/viral_actions.json",
-        data: {
-          'viral_action[platform]': "Facebook",
-          'viral_action[device]': "pc"
-        },
-        success: function (data) {
-        }
-        });
-      share();
+			if(event_open() == "running"){
+	      $.ajax({
+	        type: "POST",
+	        url: "/viral_actions.json",
+	        data: {
+	          'viral_action[platform]': "Facebook",
+	          'viral_action[device]': "pc"
+	        },
+	        success: function (data) {
+	        }
+	      });
+	      share();
+			}
     });
   });	
-
 });
 
 
+function event_open(){
+	var result;
+	result = $.ajax({
+		async: false,
+		type: 'get',
+		url: '/event_open.json',
+		success: function (data) {
+		}
+	});
+	if(result.responseJSON.result == "not_yet"){
+		alert("이벤트 오픈: 6월 12일");
+	}
+	return result.responseJSON.result;
+}
 
-function twitter_share()
-{
+function twitter_share(text, url){
+	window.open("https://twitter.com/intent/tweet?url="+encodeURIComponent(url)+"&text="+encodeURIComponent(text)+ "&count=none/", "", "height=300, width=550, resizable=1");
+	
   $.ajax({
     type: "POST",
     url: "/viral_actions.json",
@@ -190,7 +197,7 @@ function twitter_share()
     },
     success: function (data) {
     }
-    });
+  });
 }
 
 function blog_share()
@@ -203,6 +210,7 @@ function blog_share()
       'viral_action[device]': "pc"
     },
     success: function (data) {
+      
     }
     });
 }
@@ -239,7 +247,7 @@ function share() {
     method: "feed",
     name: "Skin Birthday",
     link: "<%= Rails.application.secrets.url %>?s=fb",
-    picture: 'https://<%= Rails.application.secrets.url + asset_url("sns/facebook_share.jpg") %>',
+    picture: 'https://<%= Rails.application.secrets.url %><%=asset_url("sns/facebook_share.jpg") %>',
     caption: "Make your skin birthday Sponsored by 숨37",
     description: text
   };
@@ -274,18 +282,4 @@ function fb_analytics(){
 	  var ref = document.getElementsByTagName('script')[0];
 	  ref.parentNode.insertBefore(fpw, ref);
 	})();
-}
-
-function event_open(){
-	$.ajax({
-		type: 'get',
-		url: '/event_finish.json',
-		success: function (data) {
-			if(data.result == "not_yet"){
-				return "not_yet";
-			}else{
-				return "running"
-			}
-		}
-	});
 }
