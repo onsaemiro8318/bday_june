@@ -34,8 +34,7 @@ img{
 .body_class{
   margin: 0;
   padding:0;
-  background: asset-url("pc/bg_repeat.png") top;
-  background-repeat: repeat-x;
+  background: asset-url("pc/bg_repeat.png") top center no-repeat;
 }
 
 .contain{
@@ -56,7 +55,7 @@ img{
 }
 
 .btn_event{
-	padding-bottom:430px;
+	padding-bottom:10px;
 }
 
 .content_title{
@@ -69,7 +68,6 @@ img{
 
 .share_block{
     margin:0 auto;
-    background-image: asset-url("pc/btn_middle.png");
     width:719px;
     height:154px;	
 	position:relative;
@@ -81,22 +79,35 @@ img{
 	height:43px;
 }
 .share_block a.view_p{
-	top:84px;
-	left:47px;
+	top:210px;
+	left:285px;
 	width:112px;
 	height:33px;
 }
-.share_block a.s_blog{
-	top:67px;
-	right:50px;
+
+.share_block2{
+	position:relative;
+	margin:0 auto;
+	width:280px;
+	padding-bottom:330px;
 }
-.share_block a.s_tw{
-	top:67px;
+.share_block2 a{
+	display:block;
+    position:absolute;
+	width:43px;
+	height:43px;
+}
+.share_block2 a.s_blog{
+	top:2px;
+	right:5px;
+}
+.share_block2 a.s_tw{
+	top:0;
+	right:52px;
+}
+.share_block2 a.s_fb{
+	top:0;
 	right:100px;
-}
-.share_block a.s_fb{
-	top:67px;
-	right:148px;
 }
 
 
@@ -113,7 +124,7 @@ img{
 }
 
 .product_new{
-	height:210px;
+	height:330px;
 }
 
 
@@ -380,8 +391,8 @@ img{
 
 .footer_custom{
   width: 100%;
-  background-color: #c0dbe6;
   text-align: center;
+  background:#d5cdba;
 }
 .footer_custom .inner{
  background: asset-url("pc/caution.png") top center no-repeat; 
@@ -393,8 +404,12 @@ img{
 .footer_custom .inner a{
 	position:absolute;
 	display:block;
-	top:263px;
+	top:240px;
 	left:335px;
+}
+.footer_custom .inner a.btn_map{
+	top:197px;
+	left:388px;
 }
 
 

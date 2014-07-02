@@ -9,11 +9,7 @@
 			<%= image_tag "pc/button.png" %>
 			<% end %>
 		</div>
-		<div class="share_block">
-			<%= link_to "#popup_product", {id: "product_button", class:"view_p"} do %>
-			<%= image_tag("pc/vedio_button.png", class: "video_button") %>
-			<% end %>
-
+		<div class="share_block2">
 			<a href="#" id="blog_share_link" class="s_blog">
 				<%= image_tag("pc/share_blog.png", class: "share_icon_b") %>
 			</a>			
@@ -22,7 +18,12 @@
 			</a>
 			<a href="#" id="facebook_share_link" class="s_fb">
 				<%= image_tag("pc/share_facebook.png", class: "share_icon_f") %>
-			</a>
+			</a>		
+		</div>
+		<div class="share_block">
+			<%= link_to "#popup_product", {id: "product_button", class:"view_p"} do %>
+			<%= image_tag("pc/vedio_button.png", class: "video_button") %>
+			<% end %>
 		</div>
 		<div class="product_new">
 		</div>
@@ -109,6 +110,9 @@
 	</div>
 	<div class="footer_custom"> <!-- Caution -->
 		<div class="inner">
+				<a href="http://sum37.co.kr/shopinfo/store.jsp" target="_blank" class="btn_map">
+					<%= image_tag("pc/btn_map.png") %>
+				</a>
 			<%= link_to "#popup_qna", {id: "qna_button", class:"btn_qna"} do %>
 			<%= image_tag("pc/btn_qna.png") %>
 			<% end %>
