@@ -260,12 +260,11 @@ https://birthday.su-m37.co.kr/survey?p="+phone+"
     return result
   end
   
-  def report(cmid, time)
+  def report(cmid)
     api_key = Rails.application.secrets.apistore_key
     url = "http://api.openapi.io/ppurio/1/message/report/minivertising?cmid="+cmid
     result = RestClient.get(url, 'x-waple-authorization' => api_key)
     call_status = JSON.parse(result)["call_status"].to_s
-    self.sent_at = time
     self.cmid = cmid
     self.result = result
     self.call_status = call_status

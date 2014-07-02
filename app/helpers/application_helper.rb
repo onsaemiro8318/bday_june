@@ -4,7 +4,7 @@ module ApplicationHelper
     if Time.now.month == 6
       finish_of_this_month = 30
     elsif Time.now.month == 7
-      finish_of_this_month = 20
+      finish_of_this_month = 27
     end
     days = (today.day..finish_of_this_month).to_a
     return days
