@@ -66,7 +66,7 @@ class Message < ActiveRecord::Base
 https://birthday.su-m37.co.kr/survey?p="+user.phone+"
 
 감사합니다!
-수신거부: 080-863-5542
+
 "
   end
   
@@ -82,12 +82,12 @@ https://birthday.su-m37.co.kr/survey?p="+user.phone+"
 https://birthday.su-m37.co.kr/survey?p="+phone+"
 
 감사합니다!
-수신거부: 080-863-5542
+
 "
   end
   
   def self.send_080
-"수신거부: 080-863-5542"
+""
   end
   
   def self.send_080_to_today
