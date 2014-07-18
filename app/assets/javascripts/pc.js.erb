@@ -46,14 +46,14 @@ $(document).ready(function(){
   });
   $("#gift_button").click(function(e){
     e.preventDefault();
-		if(event_open() == "running"){
+		if(event_finish() == "running"){
 	    $("#popup_info").bPopup({
 	      follow: [false, false], //x, y
 	      position: ['auto', 60], //x, y
 	      closeClass: 'b-close',
 	      modalColor: 'black'
 	    });
-		}
+		} 
     ga('send', 'event', 'button', 'click', '피부 선물 받기');
   });
 
@@ -118,7 +118,7 @@ $(document).ready(function(){
 
   $("#blog_share_link").click(function(e){
     e.preventDefault();
-		if(event_open() == "running"){
+		if(event_finish() == "running"){
 	    $("#popup_blog").modal({
 	      closeClass: 'b-close',
 	    });
@@ -131,7 +131,7 @@ $(document).ready(function(){
     e.preventDefault();
 		var text = $(this).attr("data-text");
 		var url = $(this).attr("data-url");
-		if(event_open() == "running"){
+		if(event_finish() == "running"){
 	    twitter_share(text, url);
 		}
     ga('send', 'event', 'button', 'click', 'twitter 공유하기 버튼');
@@ -152,7 +152,7 @@ $(document).ready(function(){
     FB.Canvas.setAutoGrow();
     $("#facebook_share_link").click(function(e){
       e.preventDefault();
-			if(event_open() == "running"){
+			if(event_finish() == "running"){
 	      $.ajax({
 	        type: "POST",
 	        url: "/viral_actions.json",
@@ -181,6 +181,21 @@ function event_open(){
 	});
 	if(result.responseJSON.result == "not_yet"){
 		alert("이벤트 오픈: 6월 12일");
+	}
+	return result.responseJSON.result;
+}
+
+function event_finish(){
+	var result;
+	result = $.ajax({
+		async: false,
+		type: 'get',
+		url: '/event_finish.json',
+		success: function (data) {
+		}
+	});
+	if(result.responseJSON.result == "finish"){
+		alert("이벤트가 종료되었습니다.\n다음에 참여해주세요!");
 	}
 	return result.responseJSON.result;
 }

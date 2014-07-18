@@ -14,7 +14,7 @@ $(document).ready(function(){
 		FB.Canvas.setAutoGrow();
 		$("#facebook_share_link").click(function(e){
 			e.preventDefault();
-			if(event_open()=="running"){
+			if(event_finish()=="running"){
 				$.ajax({
 					type: "POST",
 					url: "/viral_actions.json",
@@ -32,14 +32,14 @@ $(document).ready(function(){
 	
 	$("#gift_button").click(function(e){
 		e.preventDefault();
-		if(event_open()=="running"){
+		if(event_finish()=="running"){
 			window.location.href = "/mobile/users/new"; 
 		}
 	});
 	
 	$("#kakaotalk_share_link").click(function(e){
 		e.preventDefault();
-		if(event_open()=="running"){
+		if(event_finish()=="running"){
 			kakao.link("talk").send({
 				msg : "열어봐요\n어젯밤 고심해서 고른\n당신의 생일 선물",
 				url : "http://bit.ly/su-m37-kt",
@@ -81,7 +81,7 @@ $(document).ready(function(){
 	
   $("#kakaostory_share_link").click(function(e){
     e.preventDefault();
-		if(event_open() == "running"){
+		if(event_finish() == "running"){
 	    kakao.link("story").send({
 	      post : "열어봐요\n어젯밤 고심해서 고른\n당신의 생일 선물\n\nhttp://bit.ly/su-m37-ks",
 	      appid : "skin_birthday",
@@ -178,6 +178,21 @@ function event_open(){
 	});
 	if(result.responseJSON.result == "not_yet"){
 		alert("이벤트 오픈: 6월 12일");
+	}
+	return result.responseJSON.result;
+}
+
+function event_finish(){
+	var result;
+	result = $.ajax({
+		async: false,
+		type: 'get',
+		url: '/event_finish.json',
+		success: function (data) {
+		}
+	});
+	if(result.responseJSON.result == "finish"){
+		alert("이벤트가 종료되었습니다.\n다음에 참여해주세요!");
 	}
 	return result.responseJSON.result;
 }

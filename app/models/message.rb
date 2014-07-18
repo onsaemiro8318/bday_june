@@ -36,6 +36,24 @@ class Message < ActiveRecord::Base
     return message
   end
   
+  def self.send_retention_to_0718(user)
+    message = self.new
+    message.send_phone = Rails.application.secrets.send_phone
+    message.dest_phone = user.phone 
+    message.msg_body = self.send_retention_0718(user.coupon)
+    message.subject = "Skin Birthday"
+    message.send_name = user.name
+    message.sent_at = Time.now + 5.seconds
+    message.save
+    message.user = user
+    message.coupon = user.coupon
+    message.save
+    result = message.send_lms
+    message.cmid = result["cmid"]
+    message.result = result["result_code"]
+    return message
+  end
+  
   def self.send_survey_to(user)
     message = self.new
     message.send_phone = Rails.application.secrets.send_phone
@@ -58,15 +76,15 @@ class Message < ActiveRecord::Base
 "+user.name+"님,
 숨37 Skin Birthday
 이벤트에 참여해주셔서 감사합니다!
-
+ 
 더 좋은 이벤트를 위해,
 간단한 설문에 답변 부탁드려요^^
-
+설문에 답해주신 5분께 추첨을 통해 선물을 드립니다. 
+ 
 설문링크 >
-https://birthday.su-m37.co.kr/survey?p="+user.phone+"
-
+http://bit.ly/1sSD2Ii  
+ 
 감사합니다!
-수신거부: 080-863-5542
 "
   end
   
@@ -149,6 +167,30 @@ https://birthday.su-m37.co.kr/survey?p="+phone+"
 - 숨37 멤버십에 가입하셔야 혜택을 누리실 수 있습니다.
 - 전국 백화점 매장에서만 사용 가능합니다.
 - 쿠폰은 한정수량으로 조기 소진될 수 있으며 1인 1회로 한정되어 있습니다.
+"
+  end
+  
+  def self.send_retention_0718(coupon)
+    "
+[Skin Birthday]
+"+coupon.user.name+"님,
+숨37 수분크림이
+기다리고 있습니다. 
+
+숨37과 처음 만나시는 분들께
+워터-젤 크림을 드려요.
+
+쿠폰 사용기간 : ~7월 27일(일)
+쿠폰 사용하기: 
+https://birthday.su-m37.co.kr/"+coupon.code+"
+
+· 해당 쿠폰은 숨37 브랜드 첫 구매 고객만 사용 가능합니다.
+· 숨37 멤버십에 가입하셔야 혜택을 누릴 수 있습니다.
+· 전국 백화점 매장에서만 사용 가능합니다.
+· 쿠폰은 한정 수량으로 조기 소진될 수 있습니다.
+· 1인 1회 한정
+
+수신거부 : 080-863-5542
 "
   end
   

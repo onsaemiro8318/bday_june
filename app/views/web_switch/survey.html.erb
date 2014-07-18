@@ -5,16 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=10; chrome=1;">
 <meta name="fragment" content="!">
 <base target="_blank">
-<title>&#49704;37 Skin Birthday &#49444;&#47928;</title>
+<title>&#49704;37 &#51060;&#48292;&#53944; &#52280;&#50668;&#51088; &#49444;&#47928;&#51312;&#49324; </title>
 <link rel="stylesheet" type="text/css" href="">
 
-<%= stylesheet_link_tag    'application' %>
-<%= javascript_include_tag 'application'%>
+<link href='/static/forms/client/css/107533221-formview_ltr.css' type='text/css' rel='stylesheet'>
 <style type="text/css">
 
 </style>
 
 
+<link href='/static/forms/client/css/1446748018-mobile_formview_ltr.css' type='text/css' rel='stylesheet' media='screen and (max-device-width: 721px)'>
 <script type="text/javascript">
         /**
  * @license
@@ -26,27 +26,19 @@
 (function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u>l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
 
       </script>
-<link rel="alternate" type="text/xml+oembed" href="https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/oembed?url=https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/viewform&amp;format=xml">
+<link rel="alternate" type="text/xml+oembed" href="https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/oembed?url=https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/viewform?c%3D0%26w%3D1&amp;format=xml">
 <meta name="viewport" content="width=device-width">
-<meta property="og:title" content="숨37 Skin Birthday 설문"><meta property="og:type" content="article"><meta property="og:site_name" content="Google Docs"><meta property="og:url" content="https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/viewform"><meta property="og:image" content="https://ssl.gstatic.com/docs/forms/social/social-forms.png"><meta property="og:image:width" content="90"><meta property="og:image:height" content="90"><meta property="og:description" content="이벤트에 참여하신 분들께 드리는 
-간단한 설문조사 입니다.
-1분만 시간을 내주세요^^
---------------------------------------------------">
+<meta property="og:title" content="숨37 이벤트 참여자 설문조사 "><meta property="og:type" content="article"><meta property="og:site_name" content="Google Docs"><meta property="og:url" content="https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/viewform?c=0&amp;w=1"><meta property="og:image" content="https://ssl.gstatic.com/docs/forms/social/social-forms.png"><meta property="og:image:width" content="90"><meta property="og:image:height" content="90"><meta property="og:description" content="숨 skin birthday에 참여해주셔서 감사합니다
+설문에 답해주신 00분께 추첨을 통해 선물을 드립니다. 
+">
 </head>
+<body dir="ltr" class="ss-base-body"><div itemscope itemtype="http://schema.org/CreativeWork/FormObject"><meta itemprop="name" content="&#49704;37 &#51060;&#48292;&#53944; &#52280;&#50668;&#51088; &#49444;&#47928;&#51312;&#49324; ">
+<meta itemprop="description" content="&#49704; skin birthday&#50640; &#52280;&#50668;&#54644;&#51452;&#49492;&#49436; &#44048;&#49324;&#54633;&#45768;&#45796;
+&#49444;&#47928;&#50640; &#45813;&#54644;&#51452;&#49888; 00&#48516;&#44760; &#52628;&#52392;&#51012; &#53685;&#54644; &#49440;&#47932;&#51012; &#46300;&#47549;&#45768;&#45796;. 
+">
 
-
-
-
-
-
-<body dir="ltr" class="ss-base-body"><div itemscope itemtype="http://schema.org/CreativeWork/FormObject"><meta itemprop="name" content="&#49704;37 Skin Birthday &#49444;&#47928;">
-<meta itemprop="description" content="&#51060;&#48292;&#53944;&#50640; &#52280;&#50668;&#54616;&#49888; &#48516;&#46308;&#44760; &#46300;&#47532;&#45716; 
-&#44036;&#45800;&#54620; &#49444;&#47928;&#51312;&#49324; &#51077;&#45768;&#45796;.
-1&#48516;&#47564; &#49884;&#44036;&#51012; &#45236;&#51452;&#49464;&#50836;^^
---------------------------------------------------">
-
-<meta itemprop="url" content="https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/viewform">
-<meta itemprop="embedUrl" content="https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/viewform?embedded=true">
+<meta itemprop="url" content="https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/viewform?c=0&amp;w=1">
+<meta itemprop="embedUrl" content="https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/viewform?c=0&amp;w=1&amp;embedded=true">
 <meta itemprop="faviconUrl" content="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png">
 
 
@@ -54,214 +46,122 @@
 
 
 <div class="ss-form-container"><div class="ss-header-image"></div>
-<div class="ss-top-of-page"><div class="ss-form-heading"><h1 class="ss-form-title" dir="ltr">&#49704;37 Skin Birthday &#49444;&#47928;</h1>
-<div class="ss-form-desc ss-no-ignore-whitespace">이벤트에 참여하신 분들께 드리는 <br>간단한 설문조사 입니다.<br>1분만 시간을 내주세요^^<br>--------------------------------------------------</div>
+<div class="ss-top-of-page"><div class="ss-form-heading"><h1 class="ss-form-title" dir="ltr">&#49704;37 &#51060;&#48292;&#53944; &#52280;&#50668;&#51088; &#49444;&#47928;&#51312;&#49324; </h1>
+<div class="ss-form-desc ss-no-ignore-whitespace">숨 skin birthday에 참여해주셔서 감사합니다<br>설문에 답해주신 00분께 추첨을 통해 선물을 드립니다. <br></div>
 
-<hr class="ss-email-break" style="display:none;">
-<div class="ss-required-asterisk" aria-hidden="true">* 필수항목</div></div></div>
-<div class="ss-form"><form action="https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_826123300"><div class="ss-q-title">1. 숨37을 처음 만나는 날이, 당신의 피부 생일&#39;이라는 이벤트 컨셉이 와 닿으셨나요?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="1. 숨37을 처음 만나는 날이, 당신의 피부 생일&#39;이라는 이벤트 컨셉이 와 닿으셨나요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.1367447049" value="&#45348;" id="group_1367447049_1" role="radio" class="ss-q-radio" aria-label="&#45348;" required="" aria-required="true"></span>
-<span class="ss-choice-label">네</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1367447049" value="&#50500;&#45768;&#50724;" id="group_1367447049_2" role="radio" class="ss-q-radio" aria-label="&#50500;&#45768;&#50724;" required="" aria-required="true"></span>
-<span class="ss-choice-label">아니오</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1367447049" value="&#47784;&#47476;&#44192;&#51020;" id="group_1367447049_3" role="radio" class="ss-q-radio" aria-label="&#47784;&#47476;&#44192;&#51020;" required="" aria-required="true"></span>
-<span class="ss-choice-label">모르겠음</span>
-</label></li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_936068961"><div class="ss-q-title">2. Skin Birthday 캠페인을 처음 어떻게 알게 되셨나요?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="2. Skin Birthday 캠페인을 처음 어떻게 알게 되셨나요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.1999194524" value="&#52852;&#52852;&#50724;&#49828;&#53664;&#47532;" id="group_1999194524_1" role="radio" class="ss-q-radio" aria-label="&#52852;&#52852;&#50724;&#49828;&#53664;&#47532;" required="" aria-required="true"></span>
-<span class="ss-choice-label">카카오스토리</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1999194524" value="&#54168;&#51060;&#49828;&#48513;" id="group_1999194524_2" role="radio" class="ss-q-radio" aria-label="&#54168;&#51060;&#49828;&#48513;" required="" aria-required="true"></span>
-<span class="ss-choice-label">페이스북</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1999194524" value="&#47784;&#48148;&#51068;&#44305;&#44256;" id="group_1999194524_3" role="radio" class="ss-q-radio" aria-label="&#47784;&#48148;&#51068;&#44305;&#44256;" required="" aria-required="true"></span>
-<span class="ss-choice-label">모바일광고</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1999194524" value="e-mail" id="group_1999194524_4" role="radio" class="ss-q-radio" aria-label="e-mail" required="" aria-required="true"></span>
-<span class="ss-choice-label">e-mail</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1999194524" value="LG&#49373;&#54876;&#44148;&#44053; &#48143; &#49704;37 &#49324;&#51060;&#53944;" id="group_1999194524_5" role="radio" class="ss-q-radio" aria-label="LG&#49373;&#54876;&#44148;&#44053; &#48143; &#49704;37 &#49324;&#51060;&#53944;" required="" aria-required="true"></span>
-<span class="ss-choice-label">LG생활건강 및 숨37 사이트</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1999194524" value="&#51064;&#53552;&#45367; &#52852;&#54168;" id="group_1999194524_6" role="radio" class="ss-q-radio" aria-label="&#51064;&#53552;&#45367; &#52852;&#54168;" required="" aria-required="true"></span>
-<span class="ss-choice-label">인터넷 카페</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1999194524" value="&#52828;&#44396;&#49548;&#44060;" id="group_1999194524_7" role="radio" class="ss-q-radio" aria-label="&#52828;&#44396;&#49548;&#44060;" required="" aria-required="true"></span>
-<span class="ss-choice-label">친구소개</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1999194524" value="__other_option__" id="group_1999194524_8" role="radio" class="ss-q-radio ss-q-other-toggle" required="" aria-required="true"></span>
-<span class="ss-choice-label">기타:</span></label>
-<span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.1999194524.other_option_response" value="" class="ss-q-other" id="entry_1999194524_other_option_response" dir="auto" aria-label="기타"></span>
-</li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1160827774"><div class="ss-q-title">3. 페이스북, 카카오스토리, 홈페이지, 그리고 매장 응대 등  이번 숨37 Skin Birthday 행사를 통해 특히 좋았던 점이 있을까요?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="3. 페이스북, 카카오스토리, 홈페이지, 그리고 매장 응대 등  이번 숨37 Skin Birthday 행사를 통해 특히 좋았던 점이 있을까요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.743741315" value="&#49884;&#53356;&#47551; &#54532;&#47196;&#44536;&#47000;&#48141; &#50640;&#49468;&#49828; &#51613;&#51221;" id="group_743741315_1" role="radio" class="ss-q-radio" aria-label="&#49884;&#53356;&#47551; &#54532;&#47196;&#44536;&#47000;&#48141; &#50640;&#49468;&#49828; &#51613;&#51221;" required="" aria-required="true"></span>
-<span class="ss-choice-label">시크릿 프로그래밍 에센스 증정</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.743741315" value="&#47588;&#51109; &#51025;&#45824;" id="group_743741315_2" role="radio" class="ss-q-radio" aria-label="&#47588;&#51109; &#51025;&#45824;" required="" aria-required="true"></span>
-<span class="ss-choice-label">매장 응대</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.743741315" value="&#47784;&#48148;&#51068; &#53216;&#54256; &#48156;&#44553;" id="group_743741315_3" role="radio" class="ss-q-radio" aria-label="&#47784;&#48148;&#51068; &#53216;&#54256; &#48156;&#44553;" required="" aria-required="true"></span>
-<span class="ss-choice-label">모바일 쿠폰 발급</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.743741315" value="&#44305;&#44256;" id="group_743741315_4" role="radio" class="ss-q-radio" aria-label="&#44305;&#44256;" required="" aria-required="true"></span>
-<span class="ss-choice-label">광고</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.743741315" value="__other_option__" id="group_743741315_5" role="radio" class="ss-q-radio ss-q-other-toggle" required="" aria-required="true"></span>
-<span class="ss-choice-label">기타:</span></label>
-<span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.743741315.other_option_response" value="" class="ss-q-other" id="entry_743741315_other_option_response" dir="auto" aria-label="기타"></span>
-</li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_969983881"><div class="ss-q-title">4. 숨37 제품과 처음 만나셨는데, 제품을 사용해보신 소감은 어떠신가요?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="4. 숨37 제품과 처음 만나셨는데, 제품을 사용해보신 소감은 어떠신가요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.1514799267" value="&#47588;&#50864; &#51339;&#45796;" id="group_1514799267_1" role="radio" class="ss-q-radio" aria-label="&#47588;&#50864; &#51339;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">매우 좋다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1514799267" value="&#51339;&#45796;" id="group_1514799267_2" role="radio" class="ss-q-radio" aria-label="&#51339;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">좋다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1514799267" value="&#48372;&#53685;&#51060;&#45796;" id="group_1514799267_3" role="radio" class="ss-q-radio" aria-label="&#48372;&#53685;&#51060;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">보통이다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1514799267" value="&#49899;&#45796;" id="group_1514799267_4" role="radio" class="ss-q-radio" aria-label="&#49899;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">싫다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1514799267" value="&#47588;&#50864; &#49899;&#45796;" id="group_1514799267_5" role="radio" class="ss-q-radio" aria-label="&#47588;&#50864; &#49899;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">매우 싫다</span>
-</label></li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_921388837"><div class="ss-q-title">5. 숨37의 대표 제품, 재구매 1위에 빛나는 시크릿 프로그래밍 에센스를 사은품으로 받으셨는데,  제품을 사용해보신 소감은 어떠신가요?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="5. 숨37의 대표 제품, 재구매 1위에 빛나는 시크릿 프로그래밍 에센스를 사은품으로 받으셨는데,  제품을 사용해보신 소감은 어떠신가요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.2137432898" value="&#47588;&#50864; &#51339;&#45796;" id="group_2137432898_1" role="radio" class="ss-q-radio" aria-label="&#47588;&#50864; &#51339;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">매우 좋다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2137432898" value="&#51339;&#45796;" id="group_2137432898_2" role="radio" class="ss-q-radio" aria-label="&#51339;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">좋다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2137432898" value="&#48372;&#53685;&#51060;&#45796;" id="group_2137432898_3" role="radio" class="ss-q-radio" aria-label="&#48372;&#53685;&#51060;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">보통이다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2137432898" value="&#49899;&#45796;" id="group_2137432898_4" role="radio" class="ss-q-radio" aria-label="&#49899;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">싫다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.2137432898" value="&#47588;&#50864; &#49899;&#45796;" id="group_2137432898_5" role="radio" class="ss-q-radio" aria-label="&#47588;&#50864; &#49899;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">매우 싫다</span>
-</label></li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_549779541"><div class="ss-q-title">6-1. 향후에도 &#39;숨37&#39; 제품을 구매하실 의향이 있으신가요?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="6-1. 향후에도 &#39;숨37&#39; 제품을 구매하실 의향이 있으신가요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.31481895" value="&#51080;&#45796;" id="group_31481895_1" role="radio" class="ss-q-radio" aria-label="&#51080;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">있다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.31481895" value="&#50630;&#45796;" id="group_31481895_2" role="radio" class="ss-q-radio" aria-label="&#50630;&#45796;" required="" aria-required="true"></span>
-<span class="ss-choice-label">없다</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.31481895" value="&#47784;&#47476;&#44192;&#51020;" id="group_31481895_3" role="radio" class="ss-q-radio" aria-label="&#47784;&#47476;&#44192;&#51020;" required="" aria-required="true"></span>
-<span class="ss-choice-label">모르겠음</span>
-</label></li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1498151457"><div class="ss-q-title">6-2. 위 답변에 이유는? (주관식) 
-</div>
-</label>
-<textarea name="entry.1498151457" rows="8" cols="0" class="ss-q-long" id="entry_1498151457" dir="auto" aria-label="6-2. 위 답변에 이유는? (주관식)  *꼭 답변하지 않으셔도 됩니다. "></textarea>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_408779848"><div class="ss-q-title">7.  Skin Birthday 행사를 2차로 진행한다면, 특별히 받고 싶은 제품이 있으신가요?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">(시크릿 프로그래밍 에센스 제외)</div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="7.  Skin Birthday 행사를 2차로 진행한다면, 특별히 받고 싶은 제품이 있으신가요? (시크릿 프로그래밍 에센스 제외) "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.660097913" value="&#49884;&#53356;&#47551; &#47532;&#54168;&#50612; &#52968;&#49468;&#53944;&#47112;&#51060;&#53944;" id="group_660097913_1" role="radio" class="ss-q-radio" aria-label="&#49884;&#53356;&#47551; &#47532;&#54168;&#50612; &#52968;&#49468;&#53944;&#47112;&#51060;&#53944;" required="" aria-required="true"></span>
-<span class="ss-choice-label">시크릿 리페어 컨센트레이트</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.660097913" value="&#50892;&#53552;&#54400; &#53440;&#51076;&#47532;&#49828; &#50892;&#53552; &#51236; &#53356;&#47548;" id="group_660097913_2" role="radio" class="ss-q-radio" aria-label="&#50892;&#53552;&#54400; &#53440;&#51076;&#47532;&#49828; &#50892;&#53552; &#51236; &#53356;&#47548;" required="" aria-required="true"></span>
-<span class="ss-choice-label">워터풀 타임리스 워터 젤 크림</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.660097913" value="&#50640;&#50612;&#46972;&#51060;&#51669;TF &#45824;&#51600;&#47553; &#48288;&#51060;&#49828;" id="group_660097913_3" role="radio" class="ss-q-radio" aria-label="&#50640;&#50612;&#46972;&#51060;&#51669;TF &#45824;&#51600;&#47553; &#48288;&#51060;&#49828;" required="" aria-required="true"></span>
-<span class="ss-choice-label">에어라이징TF 대즐링 베이스</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.660097913" value="&#49440; &#50612;&#50920;&#51060; &#53224;&#47553; &#49440; CC" id="group_660097913_4" role="radio" class="ss-q-radio" aria-label="&#49440; &#50612;&#50920;&#51060; &#53224;&#47553; &#49440; CC" required="" aria-required="true"></span>
-<span class="ss-choice-label">선 어웨이 쿨링 선 CC</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.660097913" value="__other_option__" id="group_660097913_5" role="radio" class="ss-q-radio ss-q-other-toggle" required="" aria-required="true"></span>
-<span class="ss-choice-label">기타:</span></label>
-<span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.660097913.other_option_response" value="" class="ss-q-other" id="entry_660097913_other_option_response" dir="auto" aria-label="기타"></span>
-</li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1197831504"><div class="ss-q-title">8. 진행 과정에서 다소 개선이 필요하다고 생각하신 점이 있다면?
-<label for="itemView.getDomIdToLabel()" aria-label="(필수 입력란)"></label>
-<span class="ss-required-asterisk">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-<ul class="ss-choices" role="radiogroup" aria-label="8. 진행 과정에서 다소 개선이 필요하다고 생각하신 점이 있다면?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input checked="checked" type="radio" name="entry.519788595" value="&#53216;&#54256; &#48156;&#44553;&#51060; &#50612;&#47140;&#50880;" id="group_519788595_1" role="radio" class="ss-q-radio" aria-label="&#53216;&#54256; &#48156;&#44553;&#51060; &#50612;&#47140;&#50880;" required="" aria-required="true"></span>
-<span class="ss-choice-label">쿠폰 발급이 어려움</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.519788595" value="&#51060;&#48292;&#53944; &#44592;&#44036;&#51060; &#51687;&#51020;" id="group_519788595_2" role="radio" class="ss-q-radio" aria-label="&#51060;&#48292;&#53944; &#44592;&#44036;&#51060; &#51687;&#51020;" required="" aria-required="true"></span>
-<span class="ss-choice-label">이벤트 기간이 짧음</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.519788595" value="&#49324;&#51008;&#54408; &#51312;&#44592; &#49548;&#51652;&#51004;&#47196; &#51064;&#54620; &#44221;&#54408; &#48120;&#49688;&#47161;" id="group_519788595_3" role="radio" class="ss-q-radio" aria-label="&#49324;&#51008;&#54408; &#51312;&#44592; &#49548;&#51652;&#51004;&#47196; &#51064;&#54620; &#44221;&#54408; &#48120;&#49688;&#47161;" required="" aria-required="true"></span>
-<span class="ss-choice-label">사은품 조기 소진으로 인한 경품 미수령</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.519788595" value="&#50630;&#51020;" id="group_519788595_4" role="radio" class="ss-q-radio" aria-label="&#50630;&#51020;" required="" aria-required="true"></span>
-<span class="ss-choice-label">없음</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.519788595" value="__other_option__" id="group_519788595_5" role="radio" class="ss-q-radio ss-q-other-toggle" required="" aria-required="true"></span>
-<span class="ss-choice-label">기타:</span></label>
-<span class="ss-q-other-container goog-inline-block"><input type="text" name="entry.519788595.other_option_response" value="" class="ss-q-other" id="entry_519788595_other_option_response" dir="auto" aria-label="기타"></span>
-</li></ul>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_515062475"><div class="ss-q-title">9. 마지막으로 꼭 하고 싶은 말이나, 이번 Skin Birthday 캠페인에 대한 여러분들의 의견을 적어주세요.
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<textarea name="entry.515062475" rows="8" cols="0" class="ss-q-long" id="entry_515062475" dir="auto" aria-label="9. 마지막으로 꼭 하고 싶은 말이나, 이번 Skin Birthday 캠페인에 대한 여러분들의 의견을 적어주세요.  "></textarea>
-<div>소중한 의견 감사드리며 앞으로도 숨37 많은 사랑 부탁드립니다.</div>
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div>
-</div></div></div> 
-
-
-
-
+</div></div>
+<div class="ss-form"><form action="https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+    
+  
 <div class="ss-form-question errorbox-good" role="listitem" style="display:none">
 <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1016982132"><div class="ss-q-title">이름
+<label class="ss-q-item-label" for="entry_666921143"><div class="ss-q-title">성함을 남겨주세요
 </div>
 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.1016982132" value="<%= @user.name unless @user.nil? %>" class="ss-q-short" id="entry_1016982132" dir="auto" aria-label="이름  " title="">
-<div class="error-message"></div>
-<div class="required-message">필수 질문입니다.</div>
-</div></div></div> 
-
-<div class="ss-form-question errorbox-good" role="listitem" style="display:none">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_82589805"><div class="ss-q-title">전화번호
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.82589805" value="<%= @user.phone unless @user.nil? %>" class="ss-q-short" id="entry_82589805" dir="auto" aria-label="전화번호  " title="">
-<div class="error-message"></div>
+<input type="text" name="entry.666921143" value="<%= @user.name unless @user.nil? %>" class="ss-q-short" id="entry_666921143" dir="auto" aria-label="성함을 남겨주세요  " title="">
+<div class="error-message" id="1637705914_errorMessage"></div>
 <div class="required-message">필수 질문입니다.</div>
 </div></div></div>
 
-<input type="hidden" name="draftResponse" value="[,,&quot;4183956475488933993&quot;]
+ <div class="ss-form-question errorbox-good" role="listitem" style="display:none">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_507443987"><div class="ss-q-title">선물 받으실때 연락받을 핸드폰 번호는?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="text" name="entry.507443987" value="<%= @user.phone unless @user.nil? %>" class="ss-q-short" id="entry_507443987" dir="auto" aria-label="선물 받은실때 연락받을 핸드폰 번호는?  " title="">
+<div class="error-message" id="1495757128_errorMessage"></div>
+<div class="required-message">필수 질문입니다.</div>
+</div></div></div>
+
+ <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_434341135"><div class="ss-q-title">1.  skin birthday 이벤트 어떻게 참여하셨나요?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="1.  skin birthday 이벤트 어떻게 참여하셨나요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.148019219" value="&#54168;&#51060;&#49828;&#48513;&nbsp;" id="group_148019219_1" role="radio" class="ss-q-radio" aria-label="&#54168;&#51060;&#49828;&#48513;&nbsp;"></span>
+<span class="ss-choice-label">페이스북 </span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.148019219" value="&#52852;&#52852;&#50724;&#49828;&#53664;&#47532;&nbsp;" id="group_148019219_2" role="radio" class="ss-q-radio" aria-label="&#52852;&#52852;&#50724;&#49828;&#53664;&#47532;&nbsp;"></span>
+<span class="ss-choice-label">카카오스토리 </span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.148019219" value="&#48708;&#53944;&#50952;" id="group_148019219_3" role="radio" class="ss-q-radio" aria-label="&#48708;&#53944;&#50952;"></span>
+<span class="ss-choice-label">비트윈</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.148019219" value="&#48660;&#47196;&#44536;" id="group_148019219_4" role="radio" class="ss-q-radio" aria-label="&#48660;&#47196;&#44536;"></span>
+<span class="ss-choice-label">블로그</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.148019219" value="&#47928;&#51088;" id="group_148019219_5" role="radio" class="ss-q-radio" aria-label="&#47928;&#51088;"></span>
+<span class="ss-choice-label">문자</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.148019219" value="&#52852;&#52852;&#50724;&#53665;" id="group_148019219_6" role="radio" class="ss-q-radio" aria-label="&#52852;&#52852;&#50724;&#53665;"></span>
+<span class="ss-choice-label">카카오톡</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.148019219" value="&#44592;&#53440;" id="group_148019219_7" role="radio" class="ss-q-radio" aria-label="&#44592;&#53440;"></span>
+<span class="ss-choice-label">기타</span>
+</label></li></ul>
+<div class="error-message" id="434341135_errorMessage"></div>
+<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1210559163"><div class="ss-q-title">2.  쿠폰 발급 후 &#39;숨37&#39;을 구매하지 않은 이유가 있다면 무엇일까요?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="2.  쿠폰 발급 후 &#39;숨37&#39;을 구매하지 않은 이유가 있다면 무엇일까요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1718016015" value="&#50892;&#53552;&#54400; &#53440;&#51076;&#47532;&#49828; &#50892;&#53552;-&#51236; &#53356;&#47548;&#51060; &#55141;&#48120;&#47484; &#45132;&#51648; &#50506;&#45716;&#45796;." id="group_1718016015_1" role="radio" class="ss-q-radio" aria-label="&#50892;&#53552;&#54400; &#53440;&#51076;&#47532;&#49828; &#50892;&#53552;-&#51236; &#53356;&#47548;&#51060; &#55141;&#48120;&#47484; &#45132;&#51648; &#50506;&#45716;&#45796;."></span>
+<span class="ss-choice-label">워터풀 타임리스 워터-젤 크림이 흥미를 끌지 않는다.</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1718016015" value="&#51452;&#48320;&#50640; &#49704;37 &#47588;&#51109;&#51060; &#50612;&#46356;&#51080;&#45716;&#51648; &#47784;&#47476;&#44192;&#45796;." id="group_1718016015_2" role="radio" class="ss-q-radio" aria-label="&#51452;&#48320;&#50640; &#49704;37 &#47588;&#51109;&#51060; &#50612;&#46356;&#51080;&#45716;&#51648; &#47784;&#47476;&#44192;&#45796;."></span>
+<span class="ss-choice-label">주변에 숨37 매장이 어디있는지 모르겠다.</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1718016015" value="&#51228;&#54408; &#44396;&#47588;&#54616;&#47084; &#44040; &#49884;&#44036;&#51060; &#45208;&#51648; &#50506;&#45716;&#45796;." id="group_1718016015_3" role="radio" class="ss-q-radio" aria-label="&#51228;&#54408; &#44396;&#47588;&#54616;&#47084; &#44040; &#49884;&#44036;&#51060; &#45208;&#51648; &#50506;&#45716;&#45796;."></span>
+<span class="ss-choice-label">제품 구매하러 갈 시간이 나지 않는다.</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1718016015" value="&#51060;&#48292;&#53944;&#50640; &#52280;&#50668;&#54664;&#45716;&#51648; &#51082;&#44256; &#51080;&#50632;&#45796;." id="group_1718016015_4" role="radio" class="ss-q-radio" aria-label="&#51060;&#48292;&#53944;&#50640; &#52280;&#50668;&#54664;&#45716;&#51648; &#51082;&#44256; &#51080;&#50632;&#45796;."></span>
+<span class="ss-choice-label">이벤트에 참여했는지 잊고 있었다.</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1718016015" value="&#50728;&#46972;&#51064;&#50640;&#49436; &#44396;&#51077;&#54616;&#44256; &#49910;&#51008;&#45936; &#50728;&#46972;&#51064; &#47588;&#51109;&#50640;&#49436;&#45716; &#54812;&#53469; &#50630;&#45796;.&nbsp;" id="group_1718016015_5" role="radio" class="ss-q-radio" aria-label="&#50728;&#46972;&#51064;&#50640;&#49436; &#44396;&#51077;&#54616;&#44256; &#49910;&#51008;&#45936; &#50728;&#46972;&#51064; &#47588;&#51109;&#50640;&#49436;&#45716; &#54812;&#53469; &#50630;&#45796;.&nbsp;"></span>
+<span class="ss-choice-label">온라인에서 구입하고 싶은데 온라인 매장에서는 혜택 없다. </span>
+</label></li></ul>
+<div class="error-message" id="1210559163_errorMessage"></div>
+<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1545973339"><div class="ss-q-title">3. 향후 숨37에서 skin birthday 행사를 다시 한 번 진행한다면 쿠폰을 발급받아 제품을 구매하실 의사가 있나요?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="3. 향후 숨37에서 skin birthday 행사를 다시 한 번 진행한다면 쿠폰을 발급받아 제품을 구매하실 의사가 있나요?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1651336128" value="&#51080;&#45796;." id="group_1651336128_1" role="radio" class="ss-q-radio" aria-label="&#51080;&#45796;."></span>
+<span class="ss-choice-label">있다.</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1651336128" value="&#50630;&#45796;." id="group_1651336128_2" role="radio" class="ss-q-radio" aria-label="&#50630;&#45796;."></span>
+<span class="ss-choice-label">없다.</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1651336128" value="&#49345;&#54408;&#50640; &#45796;&#47476;&#45796;." id="group_1651336128_3" role="radio" class="ss-q-radio" aria-label="&#49345;&#54408;&#50640; &#45796;&#47476;&#45796;."></span>
+<span class="ss-choice-label">상품에 다르다.</span>
+</label></li></ul>
+<div class="error-message" id="1545973339_errorMessage"></div>
+<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1015863833"><div class="ss-q-title">4. 향후 숨37에서 이벤트할때 받고 싶은 선물은?  
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="4. 향후 숨37에서 이벤트할때 받고 싶은 선물은?    "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1964957320" value="&#49704;37 &#49884;&#53356;&#47551; &#54532;&#47196;&#44536;&#47000;&#48141; &#50640;&#49468;&#49828;" id="group_1964957320_1" role="radio" class="ss-q-radio" aria-label="&#49704;37 &#49884;&#53356;&#47551; &#54532;&#47196;&#44536;&#47000;&#48141; &#50640;&#49468;&#49828;"></span>
+<span class="ss-choice-label">숨37 시크릿 프로그래밍 에센스</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1964957320" value="&#49704;37 &#49884;&#53356;&#47551; &#47532;&#54168;&#50612; &#52968;&#49468;&#53944;&#47112;&#51060;&#53944;" id="group_1964957320_2" role="radio" class="ss-q-radio" aria-label="&#49704;37 &#49884;&#53356;&#47551; &#47532;&#54168;&#50612; &#52968;&#49468;&#53944;&#47112;&#51060;&#53944;"></span>
+<span class="ss-choice-label">숨37 시크릿 리페어 컨센트레이트</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1964957320" value="&#54868;&#51060;&#53944; &#50612;&#50892;&#46300; &#48260;&#48660; &#46356; &#47560;&#49828;&#53356;" id="group_1964957320_3" role="radio" class="ss-q-radio" aria-label="&#54868;&#51060;&#53944; &#50612;&#50892;&#46300; &#48260;&#48660; &#46356; &#47560;&#49828;&#53356;"></span>
+<span class="ss-choice-label">화이트 어워드 버블 디 마스크</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1964957320" value="&#50892;&#53552;-&#54540; &nbsp;&#53440;&#51076;&#47532;&#49828; &#50892;&#53552; &#51236;&#53356;&#47548;" id="group_1964957320_4" role="radio" class="ss-q-radio" aria-label="&#50892;&#53552;-&#54540; &nbsp;&#53440;&#51076;&#47532;&#49828; &#50892;&#53552; &#51236;&#53356;&#47548;"></span>
+<span class="ss-choice-label">워터-플  타임리스 워터 젤크림</span>
+</label></li></ul>
+<div class="error-message" id="1015863833_errorMessage"></div>
+<div class="required-message">필수 질문입니다.</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1383430594"><div class="ss-q-title">5. 좋아하는 이벤트 방식이 있다면?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="5. 좋아하는 이벤트 방식이 있다면?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.943822753" value="&#47924;&#50631;&#51060;&#45912; &#44396;&#51077;&#54616;&#47732; &#46608;&#45796;&#47480; &#51221;&#54408;&#51012; &#51452;&#45716; &#44163;.&nbsp;" id="group_943822753_1" role="radio" class="ss-q-radio" aria-label="&#47924;&#50631;&#51060;&#45912; &#44396;&#51077;&#54616;&#47732; &#46608;&#45796;&#47480; &#51221;&#54408;&#51012; &#51452;&#45716; &#44163;.&nbsp;"></span>
+<span class="ss-choice-label">무엇이던 구입하면 또다른 정품을 주는 것. </span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.943822753" value="&#47588;&#51109;&#50640; &nbsp;&#44052;&#51012;&#46412; &#53945;&#48324;&#54620; &#49368;&#54540;&#51012; &#44536;&#45285; &#51452;&#45716; &#44163;.&nbsp;" id="group_943822753_2" role="radio" class="ss-q-radio" aria-label="&#47588;&#51109;&#50640; &nbsp;&#44052;&#51012;&#46412; &#53945;&#48324;&#54620; &#49368;&#54540;&#51012; &#44536;&#45285; &#51452;&#45716; &#44163;.&nbsp;"></span>
+<span class="ss-choice-label">매장에  갔을때 특별한 샘플을 그냥 주는 것. </span>
+</label></li></ul>
+<div class="error-message" id="1383430594_errorMessage"></div>
+<div class="required-message">필수 질문입니다.</div></div></div></div>
+<input type="hidden" name="draftResponse" value="[,,&quot;4290783848421645058&quot;]
 ">
 <input type="hidden" name="pageHistory" value="0">
 
 
-<input type="hidden" name="fbzx" value="4183956475488933993">
+<input type="hidden" name="fbzx" value="4290783848421645058">
 
 <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
 <input type="submit" name="submit" value="&#48372;&#45236;&#44592;" id="ss-submit">
@@ -270,18 +170,20 @@
 <div class="ss-footer"><div class="ss-attribution"></div>
 <div class="ss-legal"><div class="disclaimer-separator"></div>
 <div class="disclaimer" dir="ltr"><div class="powered-by-logo"><span class="powered-by-text">제공</span>
-<a class="ss-logo-link" href="http://drive.google.com?usp=form_footer"><img class="ss-logo" src="https://ssl.gstatic.com/docs/forms/drive_logo_small2.png" alt="Google 드라이브"></a></div>
+<div class="ss-logo-container"><div class="ss-logo-image"></div>
+<span class="aria-only-help">Google 설문지</span></div></div>
 <div class="ss-terms"><span class="disclaimer-msg">이 콘텐츠는 Google이 만들거나 승인하지 않았습니다.</span>
 <br>
-<a href="https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/reportabuse?source=https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/viewform">악용사례 신고</a>
+<a href="https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/reportabuse?source=https://docs.google.com/forms/d/17vdYvAP14xyOohZkMPvAtly2qTCYjL6tcyeIGRVyBxw/viewform?c%3D0%26w%3D1">악용사례 신고</a>
 -
 <a href="http://www.google.com/accounts/TOS">서비스 약관</a>
 -
 <a href="http://www.google.com/google-d-s/terms.html">추가약관</a></div></div></div></div>
 
 <div id="docs-aria-speakable" class="docs-a11y-ariascreenreader-speakable docs-offscreen" aria-live="assertive" role="region" aria-atomic></div></div>
-<a class="ss-edit-link" href="https://docs.google.com/forms/d/16fLi8-U8ET2wXytkGwNHy67aziidDsGIV3XJOes6oI8/edit">양식 수정</a>
 
-<script type="text/javascript">H5F.setup(document.getElementById('ss-form'));_initFormViewer(
-          "[100,,[]\n]\n");
-      </script></div></body></html>
+
+<script type='text/javascript' src='/static/forms/client/js/96063040-formviewer_prd__ko.js'></script>
+<script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
+          _initFormViewer(
+            "[100,\x22#CCC\x22,[]\n]\n");</script></div></body></html>

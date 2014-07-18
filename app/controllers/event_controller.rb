@@ -13,7 +13,7 @@ class EventController < ApplicationController
   end
   
   def finish
-    finish_time = DateTime.parse("2014-07-15 23:58:00 +0900")
+    finish_time = DateTime.parse("2014-07-20 23:59:00 +0900")
     result = "running"
     result = "finish" if Time.now > finish_time
     respond_to do |format|

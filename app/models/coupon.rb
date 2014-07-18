@@ -9,21 +9,39 @@ class Coupon < ActiveRecord::Base
   end
   
   def send_retention
-    Message.send_retention_to(self)
+    Message.send_survey_to(self.user)
   end
   
+
+  
   def self.send_retention_message
-    offset_start = 3626
+    offset_start = 1
     finish = not_used.count
     until offset_start > finish
       offset_start = offset_start + 100
-      not_used.limit(100).offset(offset_start).each do |c|
+      not_used.where("created_at < ?", DateTime.parse("2014-07-14 23:59:59 +0900")).limit(100).offset(offset_start).each do |c|
         unless c.user.nil?
           c.send_retention
         end
       end
     end
   end
+  
+  
+  def self.send_retention_message_0718
+    offset_start = 1
+    finish = not_used.count
+    whole = User.joins(:coupon).where(coupons:{status: "not_used"})
+      .where.not(users:{phone:Coupon.exclusion_phone_numbers})
+    until offset_start > finish
+      offset_start = offset_start + 100
+      whole.limit(100).offset(offset_start).each do |user|
+        Message.send_retention_to_0718(user)
+      end
+    end
+  end
+
+
   
   def self.send_survey_message(phones)
     i = 0
@@ -60,4 +78,9 @@ class Coupon < ActiveRecord::Base
     self.save
   end
 
+
+  def self.exclusion_phone_numbers
+    %w(
+   )
+  end
 end
