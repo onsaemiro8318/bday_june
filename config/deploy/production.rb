@@ -1,6 +1,6 @@
 server 'm4.mnv.kr', user: 'deployer', roles: %w{web app db}# , my_property: :my_value
 set :ssh_options, {
-  keys: %w(/Users/minivertising/.ssh/ids/m4.mnv.kr/deployer/id_rsa),
+  keys: %w(/Users/daul/.ssh/ids/m4.mnv.kr/deployer/id_rsa),
   forward_agent: false
   # use_agent: false
   # auth_methods: %w(password)
