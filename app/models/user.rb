@@ -18,6 +18,37 @@ class User < ActiveRecord::Base
     Message.send_survey_to(self)
   end
   
+  def self.write_excel
+    users = self.all
+    workbook = WriteExcel.new('user_list.xls')
+    worksheet  = workbook.add_worksheet
+    users.each_with_index do |user, i|
+      worksheet.write(i, 0, i+1)
+      worksheet.write(i, 1 , user.name)
+      worksheet.write(i, 2 , user.phone)
+    end
+    
+    users = self.joins(:coupon).where(coupons: {status: "used"})
+    used_worksheet  = workbook.add_worksheet
+    users.each_with_index do |user, i|
+      used_worksheet.write(i, 0, i+1)
+      used_worksheet.write(i, 1 , user.name)
+      used_worksheet.write(i, 2 , user.phone)
+      used_worksheet.write(i, 3 , user.coupon.status)
+    end
+    
+    users = self.joins(:coupon).where(coupons: {status: "not_used"})
+    not_used_worksheet  = workbook.add_worksheet
+    users.each_with_index do |user, i|
+      not_used_worksheet.write(i, 0, i+1)
+      not_used_worksheet.write(i, 1 , user.name)
+      not_used_worksheet.write(i, 2 , user.phone)
+      not_used_worksheet.write(i, 3 , user.coupon.status)
+    end
+    
+    workbook.close
+  end
+  
   def send_120_survey(phone)
     Message.send_120_survey_to(phone)
   end

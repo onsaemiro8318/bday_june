@@ -3,31 +3,33 @@ class CouponsController < ApplicationController
   before_action :set_coupon, only: [:destroy, :update, :edit, :show]
   skip_before_action  :verify_authenticity_token
   def update
-    @coupon.used_at=Time.now
-    respond_to do |format|
-      if @coupon.update(coupon_params)
-        format.html { redirect_to coupon_path(@coupon.code), notice: 'Coupon was successfully updated.' }
-        format.json { render action: 'show', status: :ok, location: @coupon }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @coupon.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to root_path
+    # @coupon.used_at=Time.now
+    # respond_to do |format|
+    #   if @coupon.update(coupon_params)
+    #     format.html { redirect_to coupon_path(@coupon.code), notice: 'Coupon was successfully updated.' }
+    #     format.json { render action: 'show', status: :ok, location: @coupon }
+    #   else
+    #     format.html { render action: 'edit' }
+    #     format.json { render json: @coupon.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   def edit
-    @coupon = Coupon.find_by_code(params[:code])
-    if @coupon.is_used? == "used"
-      redirect_to coupon_path(@coupon.code)
-    end
+    # @coupon = Coupon.find_by_code(params[:code])
+    # if @coupon.is_used? == "used"
+    #   redirect_to coupon_path(@coupon.code)
+    # end
   end
   
   def show
     # @coupon = Coupon.find_by_code(params[:code])
-    if @coupon.is_used? == "used"
-    else
-      redirect_to edit_coupon_path(@coupon.code)
-    end
+    # if @coupon.is_used? == "used"
+    # else
+      # redirect_to edit_coupon_path(@coupon.code)
+      redirect_to edit_coupon_path(1)
+    # end
   end
   
   private
