@@ -23,7 +23,7 @@ class CouponsController < ApplicationController
   end
   
   def show
-    @coupon = Coupon.find_by_code(params[:code])
+    # @coupon = Coupon.find_by_code(params[:code])
     if @coupon.is_used? == "used"
     else
       redirect_to edit_coupon_path(@coupon.code)
