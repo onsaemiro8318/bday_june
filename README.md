@@ -1,4 +1,5 @@
 ```
+
 bundle exec cap install
 edit Capfile
 bundle exec rails generate rspec:install
