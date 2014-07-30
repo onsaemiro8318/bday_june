@@ -81,6 +81,6 @@ class Coupon < ActiveRecord::Base
 
   def self.exclusion_phone_numbers
     %w(
-   )
+    )
   end
 end

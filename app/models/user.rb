@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
     Message.send_survey_to(self)
   end
   
+ 
+  
   def self.write_excel
     users = self.all
     workbook = WriteExcel.new('user_list.xls')

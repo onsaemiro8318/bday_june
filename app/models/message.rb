@@ -174,8 +174,8 @@ https://birthday.su-m37.co.kr/survey?p="+phone+"
     "
 [Skin Birthday]
 "+coupon.user.name+"님,
-숨37 수분크림이
-기다리고 있습니다. 
+이번 주말 마지막 기회를
+놓치지 마세요!
 
 숨37과 처음 만나시는 분들께
 워터-젤 크림을 드려요.
